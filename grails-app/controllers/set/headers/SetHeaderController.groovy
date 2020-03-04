@@ -14,7 +14,7 @@ class SetHeaderController {
     // Works for beforeInterceptor only, issue being the 'render'
     def test() {
         boolean testBoolean = true
-        if (testBoolean) {
+        if (testBoolean == true) {
             println("Test")
         }
         render "test"
