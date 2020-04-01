@@ -10,7 +10,19 @@
 <head>
     <title>Index</title>
 </head>
-
+<g:javascript library="jquery" plugin="jquery"/>
+<script>
+    $( document ).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: '/set-headers/setHeader/test',
+            complete: function (XMLHttpRequest, textStatus) {
+                var headers = XMLHttpRequest.getAllResponseHeaders();
+                console.log(headers);
+            }
+        });
+    });
+</script>
 <body>
     Index Page
 </body>
